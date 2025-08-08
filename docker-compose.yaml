@@ -1,0 +1,12 @@
+version: "3"
+services:
+    filebrowser:
+        volumes:
+            - /home/luis:/srv
+            - ./:/database
+            - ./:/config
+        ports:
+            - 7777:80
+        image: filebrowser/filebrowser
+
+# randomly generated password for the user admin, in the console logs.
